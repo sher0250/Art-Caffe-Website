@@ -1,0 +1,393 @@
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+@media screen and (orientation:portrait) {
+.grid {
+    background: rgb(239, 238, 234);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5px 40px 340px 120px 2fr 0.7fr 10px;
+    grid-template-areas:
+              ". "
+              "navbar"
+              "circle" 
+              "logo"
+              "image"
+              "weather"
+              "footer";
+  }
+.navbar{
+  grid-area: navbar;
+  display:flex;
+  background: white;
+  width: 100%;
+  margin-top: 7px;
+  align-items: center;
+}
+.navigation{
+  display: none;
+  width:100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 0;
+}
+
+li {
+  font-size: 15pt;
+  text-align: center;
+}
+.circleContainer{
+  position: relative;
+  grid-area: circle;
+  display: grid;
+  overflow: hidden;
+  height: 500px;
+}
+.circle{
+  position: absolute;
+  justify-self: center;
+  align-self: last baseline;
+  height: 900px;
+  width: 900px;
+  border-radius: 50%;
+  background-color: white;
+  overflow: hidden;
+}
+.circle2 {
+  position: relative;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 850px;
+  width: 850px;
+  border-radius: 50%;
+  border: 10px solid #ab5db3;
+  background-image: url(images/pexels-arminas-raudys-808941.jpg);
+  background-size: 140%;
+  background-repeat: no-repeat;
+  background-position: 50% 150%;
+}
+
+  #logo {
+  grid-area: logo;
+  justify-self: center;
+  height: 350px;
+  z-index: 1;
+  transition: all 0.3s ease;
+  }
+
+  .imgArtCafe {
+    grid-area: image;
+    display:flex;
+    justify-content: center;
+  }
+
+  .weath {
+    grid-area: weather;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
+    .wtext {
+      display: grid;
+      justify-content: center;
+      margin: 20px; 
+    }
+
+ /* -------------------------------------------------------- */
+  .logoSmall{
+    height: 110px;
+    justify-self: center;
+  }
+  .wtext p{
+    text-align: center;
+    font-size: 15pt;
+  }
+  .api {
+    justify-self: center;
+    align-self: center;
+  }
+  #weather_block {
+      display: flex;
+  }
+    
+    #weather {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+    }
+    
+        #current-date {
+          font-size: 17px;
+          font-weight: bold;
+        }
+    
+        .weather {
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #efeeea;
+          width: 200px;
+        }
+    
+        .weather__city {
+          font-size: 25px;
+          color: #ab5db3;
+          font-weight: bold;
+          margin-bottom: 0px;
+
+        }
+    
+        .weather__forecast {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+    
+        .weather__temp {
+          font-size: 35px;
+          font-weight: bold;
+          color: #2392b0;
+        }
+    
+        .weather__desc {
+          font-size: 15px;
+          font-weight: bold;
+          text-transform: capitalize;
+          margin-bottom: 5px;
+        }
+    
+        .weather__icon {
+          margin-top: 10px;
+          transform: scale(3);
+        }
+  /* ----------------------------------------------------------- */
+  .footbar{
+    grid-area: footer;
+    background:#e8e4de;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+  /* -------------------------------------------------------- */
+@media screen and (orientation:landscape) {
+  .grid {
+      background: rgb(239, 238, 234);
+      display: grid;
+      grid-template-columns: 1.5fr 1px 2fr 0.3fr;
+      grid-template-rows: 5px 60px 1fr 10px;
+      grid-template-areas:
+        ". . . ."
+        "navbar navbar navbar navbar"
+        "circle logo image weather"
+        "footer footer footer footer";
+    }
+    
+        .navbar {
+          grid-area: navbar;
+          display: flex;
+          background: white;
+          width: 100%;
+          margin-top: 7px;
+          align-items: center;
+        }
+        .navigation {
+          display: flex;
+        }
+        .navigation {
+          width: 100%;
+          list-style: none;
+          justify-content: right;
+          align-items: center;
+          padding-left: 0;
+          margin-right: 100px;
+          height: fit-content;
+        }
+    
+        li a {
+          font-size: 15pt;
+          text-align: center;
+          margin-right: 100px;
+          text-decoration: none;
+        }
+        li :hover {
+          color: rgb(207, 38, 167);
+        }
+
+    .circleContainer {
+      position: relative;
+      grid-area: circle;
+      display: grid;
+      overflow: hidden;
+      align-content: center;
+      z-index: 1;
+    }
+  
+    .circle {
+      position: absolute;
+      justify-self: end;
+      align-self: center;
+      height: 1800px;
+      width: 2000px;
+      border-radius: 50%;
+      background-color: white;
+      overflow: hidden;
+    }
+  
+    .circle2 {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 1800px;
+      width: 1800px;
+      border-radius: 50%;
+      border: 10px solid #ab5db3;
+      background-image: url(images/pexels-arminas-raudys-808941.jpg);
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: 160% 50%;
+    }
+  
+    #logo {
+      grid-area: logo;
+      justify-self: center;
+      align-self: center;
+      height: 480px;
+      z-index: 1;
+    }
+    #logo:hover{
+    transform: rotate(360deg);
+    transition: transform 2s ease-out;
+    }
+
+    .imgArtCafe {
+      grid-area: image;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+  
+    .imgArtCafeImg {
+      align-self: center;
+      justify-self: right;
+      width: 120%;
+      height: 100%;
+      overflow: hidden;
+    }
+  
+    .weath {
+      grid-area: weather;
+      display: grid;
+      gap: 10px;
+      grid-template-rows: 1fr 2fr;
+      justify-content: center;
+    }
+  
+    .wtext {
+      display: grid;
+      justify-content: center;
+      margin: 20px;
+    }
+  
+    .logoSmall {
+      height: 110px;
+      justify-self: center;
+    }
+  
+    .wtext p {
+      text-align: center;
+      font-size: 15pt;
+    }
+        #weather_block {
+          display: flex;
+        }
+    
+        #weather {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 80vh;
+          background-color: aquamarine;
+        }
+    
+        #current-date {
+          font-size: 17px;
+          font-weight: bold;
+        }
+    
+        .weather {
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #efeeea;
+          width: 120px;
+          transition: transform 0.3s ease-in-out;
+        }
+        .weather:hover {
+          transform: translateY(50px);
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .weather__city {
+          font-size: 25px;
+          font-weight: bold;
+          color: #ab5db3;
+          margin-bottom: 10px;
+        }
+    
+        .weather__forecast {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+    
+        .weather__temp {
+          font-size: 35px;
+          font-weight: bold;
+          color: #2392b0;
+        }
+    
+        .weather__desc {
+          font-size: 15px;
+          font-weight: bold;
+          text-transform: capitalize;
+          margin-bottom: 5px;
+        }
+    
+        .weather__icon {
+          margin-top: 10px;
+          transform: scale(2);
+        }
+  
+    .footbar {
+      grid-area: footer;
+      background: #e8e4de;
+      height: 50px;
+      width: 100%;
+      margin-top: 20px;
+    }
+}
+
+

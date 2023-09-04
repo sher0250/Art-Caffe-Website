@@ -1,0 +1,441 @@
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .grid {
+    background: rgb(239, 238, 234);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5px 40px 340px 120px 1fr 70px 1fr 10px;
+    grid-template-areas:
+              ". . ."
+              "navbar navbar navbar"
+              "swiper swiper swiper" 
+              ". logo ."
+              "about image imgText"
+              "formText formText formText"
+              "form form form"
+              "footer footer footer";
+  }
+
+.navbar{
+  grid-area: navbar;
+  display:flex;
+  background: white;
+  width: 100%;
+  margin-top: 7px;
+  align-items: center;
+}
+
+.navigation{
+  display: none;
+  width:100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 0;
+}
+
+li a {
+  font-size: 15pt;
+  text-align: center;
+  margin-right: 100px;
+  text-decoration: none;
+  line-height: 10px;
+}
+
+li :hover {
+  color: rgb(207, 38, 167);
+}
+.artlogo{
+  display: none;
+}
+
+  .swiper {
+    grid-area: swiper;
+    width: 100%;
+    height: 340px;
+  }
+
+  .displayNone{
+    display: none;
+  }
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    height: 100%;
+    justify-self: center;
+  }
+
+  .logo{
+  grid-area: logo;
+  justify-self: center;
+  height: 160px;
+  z-index: 1;
+  transition: transform 250ms;
+  }
+
+  .logo:hover {
+    transform: scale(1.1);
+    transition: transform 250ms ease-in;
+  }
+
+  /* ------------------------------------- */
+  .background{
+    grid-column: 1 / span 3;
+    grid-row: 5 / span 1;
+    background: #e8e4de;
+  }
+
+  .contactInfo{
+    grid-area: about;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .icons a img{
+    height: 50px;
+    display: flex;
+    margin: 20px;
+  }
+
+  .icons a img:hover {
+  transform: scale(1.1);
+  transition: transform 250ms ease-in;
+  }
+
+  .about{
+  display: none;
+  }
+
+  #imgBox{
+    grid-area: image;
+    height: 250px;
+    width: 220px;
+    border: 3px solid #ab5db3;
+    justify-self: center;
+    align-self: center;
+  }
+
+  #imgBox :hover {
+    transform: scale(1.8);
+    transition: transform 250ms ease-in;
+  }
+
+  .text{
+  grid-area: imgText;
+  align-self: center;
+  width: 130px;
+  }
+
+  h1, h2 {
+    color: #ab5db3;
+    line-height: 20px;
+    font-size: 18pt;
+  }
+
+  p {
+    margin-bottom: 40px;
+    color: #6d6e71;
+    line-height: 13pt;
+    font-size: 13pt;
+  }
+  .cart{
+    height: 40px;
+    margin-top: 5px;
+  }
+  .cart:hover {
+    transform: scale(1.3);
+    transition: transform 150ms ease-in;
+  }
+
+  #cartLinkDiv{
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: 1;
+    align-items: center;
+  }
+
+#cartLink, #cart_icon {
+  grid-row: 1;
+}
+
+/* ------------------------------------------- */
+  .ordersText{
+      grid-area: formText;
+      align-self: center;
+  }
+
+  #formTitle{
+    color: #6d6e71;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 25pt;
+  }
+  .formText{
+    color: #6d6e71;
+    margin: 10px 30px 10px 30px;
+    text-align: center;
+  }
+
+  .imgBoxImg{
+    width: 100%;
+  }
+
+    input {
+      appearance: none;
+      border-radius: 0;
+    }
+    .card {
+      grid-area: form;
+      margin: 2rem auto;
+      flex-direction: column;
+      width: 100%;
+      max-width: 425px;
+      background-color: #FFF;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px 0 rgba(#999, .25);
+      padding: .75rem;
+      height: fit-content;
+    }
+        input[type=text],
+        select {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          font-size: 12pt;
+        }
+    
+        input[type=submit] {
+          width: 100%;
+          color: #ab5db3;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: 1px solid #ab5db3;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 18pt;
+        }
+    
+        input[type=submit]:hover {
+          background: #ab5db3;
+          color: white;
+        }
+
+/* --------------------------- */
+  .footbar{
+    grid-area: footer;
+    background:#e8e4de;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  /* -------------------------------------------------------- */
+@media (min-width: 850px) {
+  .grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 5px 50px 340px 120px 1fr 0.5fr 10px;
+      grid-template-areas:
+        ". . ."
+        "navbar navbar navbar"
+        "swiper swiper swiper"
+        ". logo ."
+        "about image imgText"
+        "form form formText"
+        "footer footer footer";
+    }
+    
+  .artlogo {
+    display: block;
+    height: 35px;
+    margin-left: 50px;
+    }
+
+  .navigation {
+    display: flex;
+  }
+
+  .text{
+  width: 150px;
+  }
+  .ordersText{
+      grid-area: formText;
+      align-self: center;
+  }
+
+  #formTitle{
+    color: #6d6e71;
+    text-align: left;
+    margin-left: 0;
+    line-height: 20pt;
+  }
+  .formText{
+    color: #6d6e71;
+    margin: 10px 20px 10px 0px;
+    text-align: left;
+    line-height: 15pt;
+    font-size: 15pt;
+  }
+  .card {
+      grid-area: form;
+      width: auto;
+  
+    }
+        input[type=text],
+        select {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          font-size: 12pt;
+        }
+    
+        input[type=submit] {
+          width: 100%;
+          color: #ab5db3;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: 1px solid #ab5db3;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 18pt;
+        }
+        
+    
+        input[type=submit]:hover {
+          background: #ab5db3;
+          color: white;
+        }
+
+}
+@media (min-width: 950px) {
+  .contactInfo {
+      grid-area: about;
+      margin: 0px 0px 0px 20px;
+    }
+  .contactInfo p{
+    font-size: 10pt;
+    margin: 10px;
+  }
+  .about {
+    display: grid;
+    margin-left: 13px;
+    }
+  .contactInfo h2{
+    font-weight: lighter;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .icons{
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    margin-top: 0;
+  }
+    .icons a img {
+      height: 30px;
+      margin: 10px;
+    }
+}
+
+@media (min-width: 1220px){
+  .grid {
+      height: 100%;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr 1fr 1fr 0.6fr 1fr 0.6fr;
+      grid-template-rows: 5px 50px 340px 340px 10px;
+      grid-template-areas:
+        ". . . . . ."
+        "navbar navbar navbar navbar navbar navbar"
+        "swiper swiper swiper swiper swiper swiper"
+        "about logo image imgText form formText"
+        "footer footer footer footer footer footer";
+    }
+.background {
+  display: none;
+}
+.logo {
+  grid-area: logo;
+  justify-self: center;
+  align-self: center;
+  height: 180px;
+  z-index: 10;
+}
+.contactInfo p{
+    font-size: 8pt;
+    margin: 10px;
+  }
+#formTitle {
+  color: #6d6e71;
+  text-align: left;
+  margin-left: 0;
+  font-size: 16pt;
+}
+
+.formText {
+  color: #6d6e71;
+  margin: 10px 20px 10px 0px;
+  text-align: left;
+  font-size: 10pt;
+}
+
+/* ------------------------------------ */
+    .input {
+      display: flex;
+      flex-direction: column-reverse;
+      position: relative;
+      padding-top: 1.5rem;
+    }
+
+    .input-field {
+      border: 0;
+      z-index: 1;
+      background-color: transparent;
+      border-bottom: 2px solid #eee;
+      font: inherit;
+      font-size: 10px;
+      padding: 10px;
+    }
+
+    .input{
+      height: 50px;
+    }
+
+    .input-label{
+      font-size: 15px;
+      align-self: baseline;
+    }
+
+    .card{
+      height: 250px;
+      margin: 0;
+      align-self: center;
+    }
+
+    .action-button{
+      height: 30px;
+      height: fit-content;
+    }
+}
+

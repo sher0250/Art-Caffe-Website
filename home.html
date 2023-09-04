@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Tanya Sherman">
+  <meta name="email" content="sher0250@algonquincollegelive.com">
+  <title>Home page</title>
+
+  <link rel="stylesheet" href="home-style.css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;1,300;1,400&family=Unbounded:wght@300&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+<div class="grid">
+  <div class="navbar">
+    <ul class="navigation">
+      <li><a href="home.html">HOME</a></li>
+      <li><a href="gallery.html">GALLERY</a></li>
+      <li><a href="caffe_page.html">CAFFE MENU</a></li>
+    </ul>
+  </div>
+
+  <div class="circleContainer">
+    <div class="circle">
+      <div class="circle2"></div>
+    </div>
+  </div>
+
+    <img id="logo" src="images/logo small.gif"  alt="logo">
+      <div class="imgArtCafe">
+      <img class="imgArtCafeImg" src="images/ArtCafe_comp.jpg" alt="">
+      </div>
+    
+    <div class="weath">
+
+      <div class="wtext">
+        <p>It's always a good <br> WEATHER <br>
+          to visit an</p>
+        <img class="logoSmall" src="images/logo small.gif" onmouseover="hover(this);" onmouseout="hoverOut(this)" alt="logo">
+      </div>
+
+        <div class="api">
+          <div id="weather_block">
+            <div class="weather">
+              <div id="current-date"></div>
+              <div class="weather__city"></div>
+              <div class="weather__forecast">
+                <div class="weather__temp">&deg;C</div>
+                <div class="weather__desc"></div>
+              </div>
+              <div class="weather__icon">
+                <img src="https://openweathermap.org/img/w/01n.png" alt="weather in Ottawa">
+              </div>
+            </div>
+          </div> 
+        </div>
+    </div>
+    <div class="footbar"></div>
+  </div>
+  </div>
+  </div>
+
+
+  <script src=""></script>
+  <script src="weather_script.js"></script>
+</body>
+
+</html>
+
+
